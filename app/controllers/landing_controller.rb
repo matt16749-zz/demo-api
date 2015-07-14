@@ -25,7 +25,7 @@ class LandingController < ApplicationController
     if Rails.env.development?
       redis = Redis.new
     else
-      Redis.new(:url => ENV['REDIS_HOST'])
+      Redis.new(:url => ENV['REDIS_URL'])
     end
   end
 end
